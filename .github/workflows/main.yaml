@@ -1,4 +1,4 @@
-name: client
+name: main
 
 on: push
 
@@ -7,7 +7,7 @@ defaults:
     working-directory: ./src
 
 jobs:
-  client-format:
+  check-format:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -30,7 +30,7 @@ jobs:
       - name: Check formatting
         run: npm run format:check
 
-  client-lint:
+  check-lint:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
